@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 160px;
+  background-color: #03a9f4;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 50px;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.copyright {
+  font-size: 0.8rem;
+}
