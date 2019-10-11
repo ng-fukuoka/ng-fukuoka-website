@@ -63,6 +63,7 @@
   margin-top: 72px;
   text-align: center;
   color: rgba(0, 0, 0, 0.54);
+
   &:last-child {
     margin-bottom: 80px;
   }
@@ -70,7 +71,6 @@
 
 .organizer {
   text-align: center;
-  //margin-bottom: 24px;
 
   .avator {
     width: 160px;
@@ -79,5 +79,21 @@
 
   .name {
     margin: 8px;
+  }
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+
+  th:not(:last-child),
+  td:not(:last-child) {
+    padding-right: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #03a9f4;
   }
 }
