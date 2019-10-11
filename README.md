@@ -1,27 +1,45 @@
-# NgFukuoka
+# ng-fukuoka
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
+ng-fukuoka official website
 
-## Development server
+## 開発
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angular CLI をインストールしましょう。
 
-## Code scaffolding
+```
+$ npm i -g @angular/cli
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+依存パッケージをインストールしましょう。
 
-## Build
+```
+$ npm ci
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+インストール後、サーバを起動して開発を始めてください。
 
-## Running unit tests
+```
+$ npm start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ビルド
 
-## Running end-to-end tests
+下記のコマンドを実行するとビルドします。
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+$ npm run build -- --prod
+```
 
-## Further help
+ビルド後のファイルは `dist/ng-fukuoka` に出力されます。
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## テスト
+
+ユニットテストや E2E テストを実行する場合は下記のコマンドを使用してください。
+
+```
+$ npm test
+```
+
+```
+$ npm run e2e
+```
