@@ -97,3 +97,9 @@
     color: #03a9f4;
   }
 }
+
+@media (max-width: 599px) {
+  .col-place {
+    display: none;
+  }
+}
