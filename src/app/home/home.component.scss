@@ -7,11 +7,6 @@
   background: linear-gradient(#0288d1, #29b6f6);
   color: #fff;
 
-  img {
-    width: 50vw;
-    max-width: 240px;
-  }
-
   @media (max-width: 599px) {
     min-height: calc(100vh - 56px);
   }
