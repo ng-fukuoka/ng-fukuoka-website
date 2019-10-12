@@ -1,9 +1,11 @@
+@import '../../../../theme.scss';
+
 :host {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 160px;
-  background-color: #03a9f4;
+  background-color: mat-color($app-primary);
   color: #fff;
   text-align: center;
 }

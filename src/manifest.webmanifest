@@ -1,7 +1,7 @@
 {
   "name": "ng-fukuoka",
   "short_name": "ng-fukuoka",
-  "theme_color": "#03a9f4",
+  "theme_color": "#0277bd",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",

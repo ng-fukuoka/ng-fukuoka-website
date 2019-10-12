@@ -1,3 +1,5 @@
+@import '../../theme.scss';
+
 :host {
   display: flex;
   justify-content: center;
@@ -6,5 +8,5 @@
 }
 
 .title {
-  color: #03a9f4;
+  color: mat-color($app-primary);
 }
