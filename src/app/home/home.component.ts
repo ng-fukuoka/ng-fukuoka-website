@@ -12,7 +12,6 @@ import { EventService } from '../services';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  displayedColumns: string[] = ['date', 'title', 'place'];
   events$: Observable<EventData[]>;
 
   constructor(private readonly eventService: EventService) {}

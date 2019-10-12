@@ -92,21 +92,4 @@
 .events {
   display: flex;
   justify-content: center;
-  text-align: left;
-
-  th:not(:last-child),
-  td:not(:last-child) {
-    padding-right: 16px;
-  }
-
-  a {
-    text-decoration: none;
-    color: mat-color($app-primary);
-  }
-}
-
-@media (max-width: 599px) {
-  .col-place {
-    display: none;
-  }
 }
