@@ -27,7 +27,7 @@ $ npm start
 下記のコマンドを実行するとビルドします。
 
 ```
-$ npm run build -- --prod
+$ npm run build
 ```
 
 ビルド後のファイルは `dist/ng-fukuoka` に出力されます。
