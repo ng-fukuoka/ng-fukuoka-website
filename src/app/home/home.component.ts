@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+import { EventData } from '../models';
+import { EventService } from '../services';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
+  events$: Observable<EventData[]>;
 
-  constructor() { }
+  constructor(private readonly eventService: EventService) {}
 
   ngOnInit() {
+    this.events$ = this.eventService
+      .fetchAll()
+      .pipe(map(result => result.events));
   }
-
 }

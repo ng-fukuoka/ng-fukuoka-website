@@ -1,99 +1,95 @@
-// The margin between two sections
-$margin-promotion-sections: 60px;
+@import '../../theme.scss';
 
-.docs-header-background {
-  height: 500px;
-  margin-bottom: 40px;
-}
-
-.docs-header-section {
-  text-align: center;
-  padding-top: 60px;
-}
-
-.docs-header-headline {
-  h1 {
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 40px;
-    margin: 15px 0 15px 0;
-  }
-
-  h2 {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 28px;
-    margin: 15px 0 25px 0;
-  }
-}
-
-.docs-homepage-promo {
-  align-items: center;
+.hero {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(-1 * env(safe-area-inset-left));
+  margin-right: calc(-1 * env(safe-area-inset-right));
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  min-height: calc(100vh - env(safe-area-inset-top) - 64px);
+  background: linear-gradient(
+    mat-color($app-primary),
+    mat-color($app-primary, 300)
+  );
+  color: #fff;
 
-  h2 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 400;
-    margin: 0 0 16px 0;
-    padding: 0;
-  }
-
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0 0 24px 0;
-    padding: 0;
+  @media (max-width: 599px) {
+    min-height: calc(100vh - env(safe-area-inset-top) - 56px);
   }
 }
 
+.hero-title {
+  margin: 16px 0;
+  padding: 0 16px;
+  font-size: 2rem;
+  font-weight: 400;
+}
 
-.docs-homepage-row {
+.hero-subtitle {
+  padding: 0 16px;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.hero-button {
+  margin: 32px 0 64px 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.container {
+  display: block;
+}
+
+.row {
   display: flex;
-  max-width: 920px;
-  margin: $margin-promotion-sections 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media (max-width: 599px) {
+    display: block;
+  }
 }
 
-.docs-homepage-row  img {
-  max-width: 90%;
+.col {
+  padding: 24px;
 }
 
-.docs-homepage-reverse-row {
-  flex-direction: row-reverse;
-}
-
-.docs-header-start,
-.docs-homepage-bottom-start {
+.section {
+  padding: 16px;
+  margin-top: 72px;
   text-align: center;
-  margin: $margin-promotion-sections 0;
+  color: rgba(0, 0, 0, 0.54);
+
+  &:last-child {
+    margin-bottom: 80px;
+  }
 }
 
-.docs-homepage-promo-img {
+.organizer {
   text-align: center;
-}
-
-.docs-homepage-organizer {
-  text-align: center;
-  //margin-bottom: 24px;
 
   .avator {
-    width: 120px;
+    width: 160px;
     border-radius: 50%;
   }
 
   .name {
-    width: 160px;
-    border-radius: 50%;
+    margin: 8px;
   }
 }
 
-
-.docs-homepage-promo-desc {
-  line-height: 2;
+.events {
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }

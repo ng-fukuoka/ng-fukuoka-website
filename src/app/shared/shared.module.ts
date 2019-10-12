@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { MaterialModule } from '../material';
+import { FooterComponent, HeaderComponent } from './components';
+
+const modules = [CommonModule, MaterialModule];
+const components = [FooterComponent, HeaderComponent];
 
 @NgModule({
-  imports: [
-    CommonModule,
-  ],
-  declarations: [NavbarComponent, FooterComponent],
-  exports: [NavbarComponent, FooterComponent],
+  declarations: [...components],
+  imports: [...modules],
+  exports: [...modules, ...components]
 })
-export class SharedModule { }
+export class SharedModule {}

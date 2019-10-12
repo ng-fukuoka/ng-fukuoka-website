@@ -1,0 +1,13 @@
+.logo {
+  display: flex;
+  img {
+    height: 32px;
+  }
+}
+
+.title {
+  display: flex;
+  flex: 1;
+  margin-left: 8px;
+  text-transform: uppercase;
+}

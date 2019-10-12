@@ -1,9 +1,10 @@
-# ng-fukuoka.github.io
+# ng-fukuoka
+
 ng-fukuoka official website
 
 ## 開発
 
-Angular CLIをインストールしましょう。
+Angular CLI をインストールしましょう。
 
 ```
 $ npm i -g @angular/cli
@@ -12,19 +13,33 @@ $ npm i -g @angular/cli
 依存パッケージをインストールしましょう。
 
 ```
-$ npm install
+$ npm ci
 ```
 
 インストール後、サーバを起動して開発を始めてください。
 
 ```
-$ ng serve
+$ npm start
 ```
 
-## GitHub Pagesへの公開
+## ビルド
 
-公開用のスクリプトを実行してください。
+下記のコマンドを実行するとビルドします。
 
 ```
-$ npm run deploy
+$ npm run build
+```
+
+ビルド後のファイルは `dist/ng-fukuoka` に出力されます。
+
+## テスト
+
+ユニットテストや E2E テストを実行する場合は下記のコマンドを使用してください。
+
+```
+$ npm test
+```
+
+```
+$ npm run e2e
 ```

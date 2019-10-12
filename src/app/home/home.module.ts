@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
+
+import { SharedModule } from '../shared';
+import { EventTableComponent } from './event-table/event-table.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MaterialModule,
-    HomeRoutingModule
-  ],
-  declarations: [HomeComponent]
+  declarations: [EventTableComponent, HomeComponent],
+  imports: [SharedModule, HomeRoutingModule]
 })
-export class HomeModule { }
+export class HomeModule {}
