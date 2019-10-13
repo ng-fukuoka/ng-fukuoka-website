@@ -1,4 +1,14 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  OnInit,
+  OnDestroy
+} from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+
+import { SwUpdatesService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +16,26 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {}
+export class AppComponent implements OnInit, OnDestroy {
+  private readonly onDestroy = new Subject();
+
+  constructor(
+    private snackbar: MatSnackBar,
+    private swUpdatesService: SwUpdatesService
+  ) {}
+
+  ngOnInit() {
+    this.swUpdatesService.activated$
+      .pipe(takeUntil(this.onDestroy))
+      .subscribe(() => {
+        const snack = this.snackbar.open('Update Available', 'Reload');
+        snack.onAction().subscribe(() => {
+          document.location.reload();
+        });
+      });
+  }
+
+  ngOnDestroy() {
+    this.onDestroy.next();
+  }
+}
