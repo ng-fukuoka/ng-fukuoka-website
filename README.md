@@ -1,14 +1,8 @@
-# ng-fukuoka
+# ng-fukuoka-website
 
 ng-fukuoka official website
 
 ## 開発
-
-Angular CLI をインストールしましょう。
-
-```
-$ npm i -g @angular/cli
-```
 
 依存パッケージをインストールしましょう。
 
