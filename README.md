@@ -24,7 +24,7 @@ $ npm start
 $ npm run build
 ```
 
-ビルド後のファイルは `dist/ng-fukuoka` に出力されます。
+ビルド後のファイルは `dist/ng-fukuoka/browser` に出力されます。
 
 ## テスト
 
