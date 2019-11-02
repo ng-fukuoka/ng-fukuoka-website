@@ -1,7 +1,12 @@
 .logo {
   display: flex;
+
   img {
     height: 32px;
+  }
+
+  & + .logo {
+    margin-left: 16px;
   }
 }
 
