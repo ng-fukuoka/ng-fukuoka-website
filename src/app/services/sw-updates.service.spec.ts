@@ -3,10 +3,14 @@ import { TestBed } from '@angular/core/testing';
 import { SwUpdatesService } from './sw-updates.service';
 
 describe('SwUpdatesService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let service: SwUpdatesService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(SwUpdatesService);
+  });
 
   it('should be created', () => {
-    const service: SwUpdatesService = TestBed.get(SwUpdatesService);
     expect(service).toBeTruthy();
   });
 });

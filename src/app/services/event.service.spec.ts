@@ -4,14 +4,16 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { EventService } from './event.service';
 
 describe('EventService', () => {
-  beforeEach(() =>
+  let service: EventService;
+
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule]
-    })
-  );
+    });
+    service = TestBed.inject(EventService);
+  });
 
   it('should be created', () => {
-    const service: EventService = TestBed.get(EventService);
     expect(service).toBeTruthy();
   });
 });

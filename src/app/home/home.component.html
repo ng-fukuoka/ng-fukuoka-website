@@ -1,10 +1,6 @@
 <section class="hero">
   <h1 class="hero-title">ng-fukuoka</h1>
-  <img
-    height="240"
-    src="../../../assets/images/logo-ng-fukuoka.svg"
-    alt="Angular"
-  />
+  <img height="240" src="assets/images/logo-ng-fukuoka.svg" alt="Angular" />
   <h2 class="hero-subtitle">Angular Community in Fukuoka</h2>
   <a
     class="hero-button"
@@ -31,21 +27,21 @@
   <div class="container">
     <div class="row">
       <div class="col organizer">
-        <img class="avator" src="../../../assets/images/01.png" alt="puku0x" />
+        <img class="avator" src="assets/images/01.png" alt="puku0x" />
         <div class="name">puku0x</div>
       </div>
       <div class="col organizer">
-        <img class="avator" src="../../../assets/images/02.png" alt="gupuru" />
+        <img class="avator" src="assets/images/02.png" alt="gupuru" />
         <div class="name">gupuru</div>
       </div>
     </div>
     <div class="row">
       <div class="col organizer">
-        <img class="avator" src="../../../assets/images/03.png" alt="mya-ake" />
+        <img class="avator" src="assets/images/03.png" alt="mya-ake" />
         <div class="name">mya-ake</div>
       </div>
       <div class="col organizer">
-        <img class="avator" src="../../../assets/images/04.png" alt="ponday" />
+        <img class="avator" src="assets/images/04.png" alt="ponday" />
         <div class="name">ponday</div>
       </div>
     </div>
@@ -57,6 +53,6 @@
     ng-fukuoka主催のイベントです。
   </p>
   <div class="events">
-    <app-event-table [events]="events$ | async"></app-event-table>
+    <app-event-table [events]="(events$ | async)!"></app-event-table>
   </div>
 </section>
