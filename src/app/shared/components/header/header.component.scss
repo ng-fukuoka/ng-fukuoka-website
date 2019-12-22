@@ -2,11 +2,17 @@
   display: flex;
 
   img {
-    height: 32px;
+    height: 24px;
   }
 
   & + .logo {
     margin-left: 16px;
+  }
+}
+
+.ng-fukuoka-logo {
+  img {
+    height: 32px;
   }
 }
 
