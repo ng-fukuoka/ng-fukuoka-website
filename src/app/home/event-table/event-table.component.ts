@@ -14,10 +14,10 @@ import { EventData } from '../../models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventTableComponent implements OnInit {
-  displayedColumns: string[] = ['date', 'title', 'place'];
-
   @Input()
-  public events: EventData[];
+  events: EventData[];
+
+  displayedColumns = ['date', 'title', 'place'];
 
   constructor() {}
 

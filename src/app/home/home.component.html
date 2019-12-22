@@ -57,6 +57,6 @@
     ng-fukuoka主催のイベントです。
   </p>
   <div class="events">
-    <app-event-table [events]="events$ | async"></app-event-table>
+    <app-event-table [events]="(events$ | async)!"></app-event-table>
   </div>
 </section>
