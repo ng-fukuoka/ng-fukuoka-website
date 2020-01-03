@@ -21,10 +21,10 @@ $ npm start
 下記のコマンドを実行するとビルドします。
 
 ```
-$ npm run build
+$ npm run build -- --prod && npm run scully
 ```
 
-ビルド後のファイルは `dist/ng-fukuoka/browser` に出力されます。
+ビルド後のファイルは `dist/static` に出力されます。
 
 ## テスト
 
