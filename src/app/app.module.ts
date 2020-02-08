@@ -12,15 +12,15 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     HttpClientJsonpModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     }),
-    AppRoutingModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
