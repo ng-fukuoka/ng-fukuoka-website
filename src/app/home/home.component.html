@@ -27,21 +27,49 @@
   <div class="container">
     <div class="row">
       <div class="col organizer">
-        <img class="avator" src="assets/images/01.png" alt="puku0x" />
+        <img
+          class="avator"
+          src="assets/images/01.png"
+          alt="puku0x"
+          loading="lazy"
+          width="160"
+          height="160"
+        />
         <div class="name">puku0x</div>
       </div>
       <div class="col organizer">
-        <img class="avator" src="assets/images/02.png" alt="gupuru" />
+        <img
+          class="avator"
+          src="assets/images/02.png"
+          alt="gupuru"
+          loading="lazy"
+          width="160"
+          height="160"
+        />
         <div class="name">gupuru</div>
       </div>
     </div>
     <div class="row">
       <div class="col organizer">
-        <img class="avator" src="assets/images/03.png" alt="mya-ake" />
+        <img
+          class="avator"
+          src="assets/images/03.png"
+          alt="mya-ake"
+          loading="lazy"
+          width="160"
+          height="160"
+        />
         <div class="name">mya-ake</div>
       </div>
       <div class="col organizer">
-        <img class="avator" src="assets/images/04.png" alt="ponday" />
+        <img
+          class="avator"
+          src="assets/images/04.png"
+          alt="ponday"
+          loading="lazy"
+          width="160"
+          height="160"
+        />
         <div class="name">ponday</div>
       </div>
     </div>
@@ -53,6 +81,8 @@
     ng-fukuoka主催のイベントです。
   </p>
   <div class="events">
-    <app-event-table [events]="(events$ | async)!"></app-event-table>
+    <ng-container *ngIf="events$ | async as events">
+      <app-event-table [events]="events"></app-event-table>
+    </ng-container>
   </div>
 </section>
