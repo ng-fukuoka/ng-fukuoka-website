@@ -1,14 +1,21 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { SharedModule } from './shared';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, SharedModule],
-      declarations: [AppComponent]
+      imports: [
+        MatSnackBarModule,
+        RouterTestingModule,
+        ServiceWorkerModule.register('', { enabled: false }),
+      ],
+      declarations: [AppComponent],
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   }));
 

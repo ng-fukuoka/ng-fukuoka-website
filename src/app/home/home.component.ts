@@ -10,16 +10,16 @@ import { EventService } from '../services';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
-  events$: Observable<EventData[]>;
+  events$: Observable<EventData[]> | null = null;
 
   constructor(private readonly eventService: EventService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.events$ = this.eventService
       .fetchAll()
-      .pipe(map(result => result.events));
+      .pipe(map((result) => result.events));
   }
 }

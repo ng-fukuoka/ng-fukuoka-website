@@ -2,7 +2,7 @@ import {
   Component,
   ChangeDetectionStrategy,
   OnInit,
-  OnDestroy
+  OnDestroy,
 } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subject } from 'rxjs';
@@ -14,7 +14,7 @@ import { SwUpdatesService } from './services';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit, OnDestroy {
   private readonly onDestroy = new Subject();
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private swUpdatesService: SwUpdatesService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.swUpdatesService.activated$
       .pipe(takeUntil(this.onDestroy))
       .subscribe(() => {
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit, OnDestroy {
       });
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.onDestroy.next();
   }
 }
