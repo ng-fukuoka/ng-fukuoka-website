@@ -1,28 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { environment } from '../environments/environment';
-import { SharedModule } from './shared';
+import { HeaderComponent, FooterComponent } from './components';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    MatSnackBarModule,
+    MatToolbarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production
+      enabled: environment.production,
     }),
-    SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

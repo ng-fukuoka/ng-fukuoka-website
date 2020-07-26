@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 
-import { SharedModule } from '../shared';
-import { EventTableComponent } from './event-table/event-table.component';
+import { EventTableComponent } from './components';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [EventTableComponent, HomeComponent],
-  imports: [SharedModule, HomeRoutingModule]
+  imports: [CommonModule, MatButtonModule, MatTableModule, HomeRoutingModule],
 })
 export class HomeModule {}
