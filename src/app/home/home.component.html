@@ -1,6 +1,11 @@
 <section class="hero">
   <h1 class="hero-title">ng-fukuoka</h1>
-  <img height="240" src="assets/images/logo-ng-fukuoka.svg" alt="Angular" />
+  <img
+    src="assets/images/logo-ng-fukuoka.svg"
+    width="240"
+    height="240"
+    alt="Angular"
+  />
   <h2 class="hero-subtitle">Angular Community in Fukuoka</h2>
   <a
     class="hero-button"
@@ -15,15 +20,14 @@
 <section class="section">
   <h2 class="title">About</h2>
   <p>
-    ng-fukuokaは福岡を中心に活動するAngularユーザーコミュニティです。<br />
+    ng-fukuokaは福岡を中心に活動するAngularユーザーコミュニティです。
+    <br />
     ミートアップやもくもく会などを開催してAngularの普及に努めています。
   </p>
 </section>
 <section class="section">
   <h2 class="title">Organizers</h2>
-  <p>
-    ng-fukuokaの運営メンバーです。
-  </p>
+  <p>ng-fukuokaの運営メンバーです。</p>
   <div class="container">
     <div class="row">
       <div class="col organizer">
@@ -77,9 +81,7 @@
 </section>
 <section class="section">
   <h2 class="title">Events</h2>
-  <p>
-    ng-fukuoka主催のイベントです。
-  </p>
+  <p>ng-fukuoka主催のイベントです。</p>
   <div class="events">
     <ng-container *ngIf="events$ | async as events">
       <app-event-table [events]="events"></app-event-table>
