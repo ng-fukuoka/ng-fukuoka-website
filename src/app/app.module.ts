@@ -18,11 +18,10 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
-    BrowserModule,
-    // BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NoopAnimationsModule,
     RendererModule.forRoot(),
-    // TransferHttpCacheModule,
+    TransferHttpCacheModule,
     HttpClientModule,
     HttpClientJsonpModule,
     MatSnackBarModule,
