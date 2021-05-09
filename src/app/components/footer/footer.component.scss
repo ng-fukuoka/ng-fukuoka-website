@@ -1,11 +1,12 @@
-@import 'theme.scss';
+@use '~@angular/material' as mat;
+@use 'theme.scss' as theme;
 
 :host {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 160px;
-  background-color: mat-color($app-primary);
+  background-color: mat.get-color-from-palette(theme.$ng-fukuoka-primary);
   color: #fff;
   text-align: center;
 }
