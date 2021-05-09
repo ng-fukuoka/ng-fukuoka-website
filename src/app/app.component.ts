@@ -17,7 +17,7 @@ import { SwUpdatesService } from './services';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit, OnDestroy {
-  private readonly onDestroy = new Subject();
+  private readonly onDestroy = new Subject<void>();
 
   constructor(
     private snackbar: MatSnackBar,

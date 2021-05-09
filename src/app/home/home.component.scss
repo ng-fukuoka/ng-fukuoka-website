@@ -1,4 +1,5 @@
-@import 'theme.scss';
+@use '~@angular/material' as mat;
+@use 'theme.scss' as theme;
 
 .hero {
   display: flex;
@@ -11,8 +12,8 @@
   padding-right: env(safe-area-inset-right);
   min-height: calc(100vh - env(safe-area-inset-top) - 64px);
   background: linear-gradient(
-    mat-color($app-primary),
-    mat-color($app-primary, 300)
+    mat.get-color-from-palette(theme.$ng-fukuoka-primary),
+    mat.get-color-from-palette(theme.$ng-fukuoka-primary, 300)
   );
   color: #fff;
 

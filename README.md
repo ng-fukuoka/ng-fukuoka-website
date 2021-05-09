@@ -21,19 +21,15 @@ $ npm start
 下記のコマンドを実行するとビルドします。
 
 ```
-$ npm run build -- --prod && npm run scully
+$ npm run build
 ```
 
-ビルド後のファイルは `dist/static` に出力されます。
+ビルド後のファイルは `dist/ng-fukuoka/browser` に出力されます。
 
 ## テスト
 
-ユニットテストや E2E テストを実行する場合は下記のコマンドを使用してください。
+ユニットテストを実行する場合は下記のコマンドを使用してください。
 
 ```
 $ npm test
-```
-
-```
-$ npm run e2e
 ```

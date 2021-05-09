@@ -1,10 +1,25 @@
-@import '~@angular/material/theming';
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
 
-@include mat-core();
+// Plus imports for other components in your app.
+@use 'theme.scss' as theme;
 
-@import 'theme.scss';
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
 
-@include angular-material-theme($app-theme);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes(theme.$ng-fukuoka-theme);
+
+html,
+body {
+  height: 100%;
+  background-color: mat.get-color-from-palette(theme.$ng-fukuoka-primary);
+}
 
 html {
   padding-top: env(safe-area-inset-top);
@@ -13,15 +28,9 @@ html {
   padding-right: env(safe-area-inset-right);
 }
 
-html,
-body {
-  height: 100%;
-  background-color: mat-color($app-primary);
-}
 body {
   margin: 0;
-  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
-    Lucida Grande, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 *,

@@ -1,6 +1,22 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
-$app-primary: mat-palette($mat-light-blue, 800);
-$app-accent: mat-palette($mat-yellow, A200, A100, A400);
-$app-warn: mat-palette($mat-red);
-$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ng-fukuoka-primary: mat.define-palette(mat.$light-blue-palette);
+$ng-fukuoka-accent: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ng-fukuoka-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$ng-fukuoka-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $ng-fukuoka-primary,
+      accent: $ng-fukuoka-accent,
+      warn: $ng-fukuoka-warn,
+    ),
+  )
+);
