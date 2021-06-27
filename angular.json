@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "ng-fukuoka"
+  "defaultProject": "ng-fukuoka",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
