@@ -116,6 +116,24 @@
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "configFile": "e2e/cypress.json",
+            "devServerTarget": "ng-fukuoka:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng-fukuoka:serve:production"
+            },
+            "ci": {
+              "watch": false,
+              "headless": true
+            }
+          }
+        },
         "prerender": {
           "builder": "@nguniversal/builders:static-generator",
           "options": {
