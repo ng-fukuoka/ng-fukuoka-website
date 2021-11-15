@@ -119,9 +119,17 @@
         "prerender": {
           "builder": "@nguniversal/builders:static-generator",
           "options": {
-            "browserTarget": "ng-fukuoka:build:production",
             "routes": ["/"]
-          }
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ng-fukuoka:build:production"
+            },
+            "development": {
+              "browserTarget": "ng-fukuoka:build:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
