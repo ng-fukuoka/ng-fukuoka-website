@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({ appId: 'appId' }),
     NoopAnimationsModule,
     RendererModule.forRoot(),
     TransferHttpCacheModule,
